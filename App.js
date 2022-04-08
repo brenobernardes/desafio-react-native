@@ -1,10 +1,8 @@
-import Login from './src/pages/Login/login';
+import Routes from "./src/routes";
 
 export default function App() {
   return (
-    
-      <Login />
-
+    <Routes />
   );
 }
 
