@@ -26,7 +26,8 @@
     "react-router-native": "^6.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "miragejs": "^0.1.43"
   },
   "private": true
 }
