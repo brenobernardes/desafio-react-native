@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import 'react-native-gesture-handler';
 // import { NavigationContainer, createStackNavigator } from "@react-navigation";
 import { Ionicons } from '@expo/vector-icons';
-import {styles} from './styles';
+import { styles } from './styles';
 // import coletasLancamento from "../Coletas-Lançamento/coletas-lancamento";
 import { 
     View, 

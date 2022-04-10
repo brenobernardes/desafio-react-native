@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, } from "react-native";
+import { server } from '../../server.js';
+import { styles } from "./styles.js";
 
 export default function coletasDisponiveis () {
     let [colletcs, setCollects] = useState([])
@@ -12,11 +14,24 @@ export default function coletasDisponiveis () {
 
     return (
         <View>
-            <Text>Coletas Disponiveis</Text>
+            <Text style={styles.title}>Coletas Disponiveis</Text>
             
-            {colletcs.map((collect) => (
-                <Text key={collect.id}>{collect.situation}</Text>
+            
+                {colletcs.map((collect) => (
+                    <View style={styles.card}>
+                        <Text style={styles.card} key={collect.id}>Remetente: {collect.remetente}</Text>
+                        <Text style={styles.card}>
+                            Endereço: {collect.street}, 
+                            N: {collect.number} -   
+                            Bairro: {collect.neighborhood} - 
+                            Cidade: {collect.cityIDAddress.name} - 
+                            Estado: {collect.cityIDAddress.state} 
+                        </Text>
+                    </View>
+                
             ))}
+            
+            
         </View>
     )
 }
